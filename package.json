@@ -9,7 +9,7 @@
     "os": false
   },
   "scripts": {
-    "heroku-prebuild":"npm instal; --dev",
+    "heroku-prebuild":"npm install --dev",
     "start": "webpack-dev-server --config webpack.config.js",
     "test": "jest",
     "lint": "eslint ./src/**/*.ts"
