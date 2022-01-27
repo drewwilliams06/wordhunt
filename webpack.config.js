@@ -36,6 +36,9 @@ module.exports = {
     hot: true,
     historyApiFallback: true
   },
+  scripts: {
+    "heroku-prebuild": "npm install --dev"
+  },
   resolve: {
     extensions: ['.ts', '.js'],
     alias: {
@@ -50,6 +53,7 @@ module.exports = {
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
-    })
+    }),
+  
   ]
 }
