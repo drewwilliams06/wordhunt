@@ -1,6 +1,6 @@
 export * from './ecs'
 export * from './lifecycle'
-export * from './Vector2D'
+export * from './vector2D'
 export * from './canvas'
 export * from './color'
 export * from './font'
