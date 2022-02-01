@@ -9,14 +9,13 @@
     "os": false
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js",
-    "build": "tsc",
-    "dev": "webpack-dev-server",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack -config webpack.prod.js",
     "test": "jest",
     "lint": "eslint ./src/**/*.ts"
   },
   "engines": {
-    "node": ">=12.10.0",
+    "node": ">=12.13.0",
     "npm": ">=6.10.3"
   },
   "author": "",
@@ -26,6 +25,7 @@
     "@types/node": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "@webpack-cli/serve": "^1.6.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^25.1.0",
@@ -34,23 +34,23 @@
     "canvas": "^2.6.1",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.8.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.0.0",
     "jest": "^26.0.1",
     "pre-commit": "^1.2.2",
     "script-ext-html-webpack-plugin": "^2.1.4",
     "ts-jest": "^26.1.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.8.0"
   },
   "pre-commit": [
     "lint",
     "test"
   ],
   "dependencies": {
-    "webpack-dev-server": "^3.11.0",
     "fs": "^0.0.1-security"
   }
 }

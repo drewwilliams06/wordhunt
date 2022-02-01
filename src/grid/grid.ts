@@ -42,13 +42,13 @@ export class Grid extends Entity {
         this._score=0
 
         this.InitNodes() //and _input
-        
+        this._input.Awake()
+        this._timer.Awake()
         // awake children
         for (const node of this._nodes) { 
             node.Awake()
         }
-        this._input.Awake()
-        this._timer.Awake()
+
     }
 
     private InitNodes(): void {
