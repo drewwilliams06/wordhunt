@@ -11,7 +11,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
     "build": "tsc",
-    "dev": "nodemon",
+    "dev": "webpack-dev-server",
     "test": "jest",
     "lint": "eslint ./src/**/*.ts"
   },
