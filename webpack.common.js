@@ -1,18 +1,19 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+
 
 module.exports = {
-  entry: {
-    app: './src/main.ts',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Production',
-    }),
-  ],
+    entry: {
+        app: `${path.join(__dirname, 'src')}/main.ts`
+        },
+
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].[hash].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -35,4 +36,14 @@ module.exports = {
       '@': path.join(__dirname, 'src')
     }
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: `${path.join(__dirname, 'public')}/index.html`
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
+    }),
+  ]
 }
