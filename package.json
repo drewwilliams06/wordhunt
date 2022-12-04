@@ -52,6 +52,7 @@
   ],
   "dependencies": {
     "fs": "^0.0.1-security",
-    "webpack": "5.0.0"
+    "webpack": "^5.0.0",
+    "html-webpack-plugin":"^5.0.0"
   }
 }
