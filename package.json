@@ -9,7 +9,7 @@
     "os": false
   },
   "scripts": {
-    "start": "npx webpack --open --config webpack.prod.js",
+    "start": "npx webpack --config webpack.prod.js",
     "build": "npx webpack --config webpack.prod.js",
     "test": "jest",
     "lint": "eslint ./src/**/*.ts"
